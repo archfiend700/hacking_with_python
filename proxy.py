@@ -63,7 +63,7 @@ def hexdump(src, lenght=16, show=True):
 # buffer for receiving and accumulating data from the socket
 def receive_from(connection):
     buffer = b""
-    connection.settimeout(5) #increase if necessary, this proxy is quite aggressive
+    connection.settimeout(5) #increase if necessary
     try:
         while True:
             data = connection.recv(4096) #loop to continuously read data into the buffer with a simple if statement to
